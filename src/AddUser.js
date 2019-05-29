@@ -20,6 +20,7 @@ class AddUser extends Component {
             if (user.username === currentUsername)
             return true;
         }
+        return false;
     }
 
     // Handle the submit
@@ -51,7 +52,7 @@ class AddUser extends Component {
     // Rest the input field
     resetButton = () => {
         const { firstName, lastName, username } = this.state.user;
-        return firstName === '' && lastName === '' && username === '';
+        return firstName === '' || lastName === '' || username === '';
     };
 
     render() {
