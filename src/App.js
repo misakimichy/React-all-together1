@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AddUser from './AddUser.js'
-import UserInfo from '.UserInfo.js'
+import AddUser from './AddUser.js';
+import UserInfo from './UserInfo.js';
 
 
 class App extends Component {
