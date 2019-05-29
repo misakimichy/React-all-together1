@@ -4,15 +4,20 @@ import './App.css';
 import AddUser from './AddUser.js'
 import UserInfo from '.UserInfo.js'
 
-/*
-This exercise will help you put together and practice all of the concepts you've
-learned thus far. It will also help you form a strong foundational knowledge of
-React and prepare you for your first project.
-
-The instructions for this project are located in the `instructions.md` file.
-*/
 
 class App extends Component {
+  state = {
+    users: [],
+  };
+
+  // Update state 
+  createUser = user => {
+    user.numberOfGamesPlayed = 0;
+    this.setState(state => ({
+      users: [...state.users, user],
+    }));
+  };
+  
   render() {
     return (
       <div className="App">
@@ -20,10 +25,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
-        <div>
-          <AddUser />
-          <UserInfo />
-        </div>
+        <AddUser users={this.state.users} onAddUser={this.createUser} />
+        <UserInfo users={this.state.users} />
       </div>
     );
   }
