@@ -12,7 +12,8 @@ class App extends Component {
 
   // Update state 
   createUser = user => {
-    user.numberOfGamesPlayed = 0;
+    // Update number of game played
+    user.numGamePlayed = 0;
     this.setState(state => ({
       users: [...state.users, user],
     }));
