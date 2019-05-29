@@ -63,6 +63,7 @@ class AddUser extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <input
+                            className="name-input"
                             type="text"
                             name="firstName"
                             placeholder="First Name"
@@ -71,6 +72,7 @@ class AddUser extends Component {
                             >
                         </input>
                         <input
+                            className="name-input"
                             type="text"
                             name="lastName"
                             placeholder="Last Name"
@@ -79,6 +81,7 @@ class AddUser extends Component {
                             >
                         </input>
                         <input
+                            className="name-input"
                             type="text"
                             name="username"
                             placeholder="Username"
