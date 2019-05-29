@@ -93,7 +93,8 @@ class AddUser extends Component {
                     <button disabled={this.resetButton()}>Add</button>
                 </form>
 
-                {/* Return error message when the user exists */}
+                {/* Return the error message when the username already exists. */}
+                {/* Return empty string when the username is available. */}
                 {this.state.userExists ? (
                     <p className="errorMessage">The username already exists.</p>
                 ) : (
@@ -108,6 +109,6 @@ class AddUser extends Component {
 AddUser.propTypes = {
     users: PropTypes.array.isRequired,
     onAddUser: PropTypes.func.isRequired,
-}
+};
 
 export default AddUser;
