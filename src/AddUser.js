@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 class AddUser extends Component {
     state = {
         user: {
-            firstName:'',
-            lastName:'',
-            userName:'',
+            firstName: '',
+            lastName: '',
+            username: '',
         },
         userExists: false,
     };
