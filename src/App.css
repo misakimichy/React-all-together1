@@ -22,6 +22,11 @@
   font-size: large;
 }
 
+.name-input {
+  display: block;
+  margin: 10px auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
