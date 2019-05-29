@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import User from './User.js';
 
 class UserInfo extends Component {
     state = {
@@ -19,13 +20,22 @@ class UserInfo extends Component {
         return (
             <div>
                 <h1>User</h1>
-                <button
+                {users.length > 0 ? (
+                    <button
                     className="played-button"
                     onClick={this.toggleGamePlayedMessage}
                 >
                     {numOfGamePlayed ? 'Hide ' : 'Show '}
                     The Number of Game Played
                 </button>
+                ) : (
+                    ''
+                )}
+                <ul>
+                    {users.map(user => (
+                        <User key={user.username} user={user} numOfGamePlayed={numOfGamePlayed} />
+                    ))}
+                </ul>
             </div>
         );
     }
