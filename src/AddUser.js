@@ -87,7 +87,7 @@ class AddUser extends Component {
                             >
                         </input>
                     </div>
-                    <button reset={this.resetButton()}>Add</button>
+                    <button disabled={this.resetButton()}>Add</button>
                 </form>
 
                 {/* Return error message when the user exists */}
